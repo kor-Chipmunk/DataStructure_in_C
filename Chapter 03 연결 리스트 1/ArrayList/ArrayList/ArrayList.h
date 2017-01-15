@@ -1,14 +1,22 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "Point.h"
+#include "NameCard.h"
 
 #define TRUE	1
 #define FALSE	0
 
 /*** ArrayList¿« ¡§¿« ****/
 #define LIST_LEN	100
+
 // typedef int LData;
-typedef Point * LData;
+// typedef Point * LData;
+typedef NameCard * LData;
 
 typedef struct __ArrayList
 {

@@ -1,30 +1,28 @@
-#include <stdio.h>
 #include "ArrayList.h"
 
+/*
 void ArrayListMain()
 {
-	/*** ArrayList의 생성 및 초기화 ***/
+	// ArrayList의 생성 및 초기화
 	List list;
 	int data, i, sum = 0;
 	ListInit(&list);
 
-	/*** 5개의 데이터 저장 ***/
-	/*
-	LInsert(&list, 11);  LInsert(&list, 11);
-	LInsert(&list, 22);  LInsert(&list, 22);
-	LInsert(&list, 33);
-	*/
+	// 5개의 데이터 저장
+	// LInsert(&list, 11);  LInsert(&list, 11);
+	// LInsert(&list, 22);  LInsert(&list, 22);
+	// LInsert(&list, 33);
 
-	/* 1부터 9까지 데이터 저장 */
+	// 1부터 9까지 데이터 저장
 	for (i = 0; i < 9; i++)
 		LInsert(&list, i + 1);
 
-	/*** 저장된 데이터의 전체 출력 ***/
+	// 저장된 데이터의 전체 출력
 	printf("현재 데이터의 수: %d \n", LCount(&list));
 
 	if (LFirst(&list, &data))    // 첫 번째 데이터 조회
 	{
-		/* sum 추가 */
+		// sum 추가
 		printf("%d ", data);
 		sum += data;
 
@@ -35,10 +33,10 @@ void ArrayListMain()
 	}
 	printf("총 더한 값 : %d\n\n", sum);
 
-	/*** 숫자 22을 탐색하여 모두 삭제 ***/
+	// 숫자 22을 탐색하여 모두 삭제
 	if (LFirst(&list, &data))
 	{
-		/* 2의 배수 또는 3의 배수이면 삭제 */
+		// 2의 배수 또는 3의 배수이면 삭제
 		if (data % 2 == 0 || data % 3 == 0)
 			LRemove(&list);
 		// if (data == 22)
@@ -51,7 +49,7 @@ void ArrayListMain()
 		}
 	}
 
-	/*** 삭제 후 저장된 데이터 전체 출력 ***/
+	// 삭제 후 저장된 데이터 전체 출력
 	printf("현재 데이터의 수: %d \n", LCount(&list));
 
 	if (LFirst(&list, &data))
@@ -63,7 +61,9 @@ void ArrayListMain()
 	}
 	printf("\n\n");
 }
+*/
 
+/*
 void PointListMain()
 {
 	List list;
@@ -135,10 +135,77 @@ void PointListMain()
 	}
 	printf("\n");
 }
+*/
+
+void NameCardListMain()
+{
+	List list;
+	NameCard * pnamecard;
+	ListInit(&list);
+
+	// 3개의 데이터 저장 //
+	printf("[ 3개 데이터 저장 ]\n");
+	pnamecard = MakeNameCard("김선재", "010-1234-5678");
+	LInsert(&list, pnamecard);
+
+	pnamecard = MakeNameCard("엄마", "010-1357-2468");
+	LInsert(&list, pnamecard);
+
+	pnamecard = MakeNameCard("아빠", "010-2468-1357");
+	LInsert(&list, pnamecard);
+
+	// 저장된 데이터의 출력 //
+	printf("현재 데이터의 수: %d \n", LCount(&list));
+
+	if (LFirst(&list, &pnamecard))
+	{
+		// ShowNameCardInfo(pnamecard);
+		if (!NameCompare(pnamecard, "엄마"))
+		{
+			printf("[ 변경 전 ]\n");
+			ShowNameCardInfo(pnamecard);					// 변경 전
+			ChangePhoneNum(pnamecard, "010-0000-0000");
+			printf("[ 변경 후 ]\n");
+			ShowNameCardInfo(pnamecard);					// 변경 후
+
+			pnamecard = LRemove(&list);
+			free(pnamecard);
+		}
+
+		while (LNext(&list, &pnamecard))
+		{
+			if (!NameCompare(pnamecard, "엄마"))
+			{
+				printf("[ 변경 전 ]\n");
+				ShowNameCardInfo(pnamecard);					// 변경 전
+				ChangePhoneNum(pnamecard, "010-0000-0000");
+				printf("[ 변경 후 ]\n\n");
+				ShowNameCardInfo(pnamecard);					// 변경 후
+				printf("\n");
+
+				pnamecard = LRemove(&list);
+				free(pnamecard);
+			}
+		}
+	}
+
+	// 삭제 후 남은 데이터 전체 출력 //
+	printf("현재 데이터의 수: %d \n", LCount(&list));
+
+	if (LFirst(&list, &pnamecard))
+	{
+		ShowNameCardInfo(pnamecard);
+
+		while (LNext(&list, &pnamecard))
+			ShowNameCardInfo(pnamecard);
+	}
+	printf("\n");
+}
 
 int main(void)
 {
 	// ArrayListMain();
-	PointListMain();
+	// PointListMain();
+	NameCardListMain();
 	return 0;
 }

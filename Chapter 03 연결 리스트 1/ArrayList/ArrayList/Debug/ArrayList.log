@@ -1,21 +1,4 @@
-﻿  Point.c
-  ListMan.c
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(20): warning C4047: '함수': 'LData'의 간접 참조 수준이 'int'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(20): warning C4024: 'LInsert': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(25): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(25): warning C4024: 'LFirst': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(31): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(31): warning C4024: 'LNext': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(39): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(39): warning C4024: 'LFirst': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(47): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(47): warning C4024: 'LNext': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(57): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(57): warning C4024: 'LFirst': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(61): warning C4047: '함수': 'LData *'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(61): warning C4024: 'LNext': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(76): warning C4013: 'malloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\chipmunk\documents\visual studio 2015\projects\datastructure_in_c\chapter 03 연결 리스트 1\arraylist\arraylist\listman.c(113): warning C4013: 'free'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+﻿  ListMan.c
   ArrayList.c
   코드를 생성하고 있습니다...
   ArrayList.vcxproj -> C:\Users\Chipmunk\Documents\Visual Studio 2015\Projects\DataStructure_in_C\Chapter 03 연결 리스트 1\ArrayList\Debug\ArrayList.exe

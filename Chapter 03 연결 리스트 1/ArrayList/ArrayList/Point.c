@@ -1,4 +1,3 @@
-#include <stdio.h> 
 #include "Point.h"
 
 void SetPointPos(Point * ppos, int xpos, int ypos)

@@ -1,6 +1,8 @@
 #ifndef __POINT_H__
 #define __POINT_H__
 
+#include <stdio.h>
+
 typedef struct _point
 {
 	int xpos;
