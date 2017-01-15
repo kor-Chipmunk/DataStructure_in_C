@@ -41,17 +41,18 @@ int LNext(List * plist, LData * pdata)
 
 LData LRemove(List * plist)
 {
-	int rpos = plist->curPosition;
+	int rpos = plist->curPosition;		// 삭제할 데이터의 인덱스 값 참조
 	int num = plist->numOfData;
 	int i;
-	LData rdata = plist->arr[rpos];
+	LData rdata = plist->arr[rpos];		// 삭제할 데이터를 임시로 저장
 
+	// 삭제를 위한 데이터의 이동을 진행하는 반복문
 	for (i = rpos; i<num - 1; i++)
 		plist->arr[i] = plist->arr[i + 1];
 
-	(plist->numOfData)--;
-	(plist->curPosition)--;
-	return rdata;
+	(plist->numOfData)--;				// 데이터의 수 감소
+	(plist->curPosition)--;				// 참조위치를 하나 되돌린다.
+	return rdata;						// 삭제된 데이터의 반환
 }
 
 int LCount(List * plist)
