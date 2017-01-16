@@ -32,9 +32,9 @@ int main(void)
 		if (head == NULL)
 			head = newNode;
 		else
-			tail->next = newNode;
+			newNode->next = head;
 		
-		tail = newNode;
+		head = newNode;
 	}
 	printf("\n");
 
